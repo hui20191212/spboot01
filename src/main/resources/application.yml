@@ -1,0 +1,29 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /spboot01
+spring:
+  freemarker:
+   suffix: .ftl
+   content-type: text/html
+   charset: UTF-8
+   cache: false
+   template-loader-path: classpath:/templates
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+  jackson:
+    serialization:
+    #json输出格式化
+      indent-output: true
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/jsp/
+#      suffix: .jsp
